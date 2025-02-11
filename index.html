@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainFX Demo</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background: #121212;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            position: absolute;
+            top: 20%;
+            width: 100%;
+            font-size: 3rem;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la lluvia mágica ☔</h1>
+    <canvas id="rainCanvas"></canvas>
+    <script>
+        const lluvia = new RainFX("rainCanvas", {
+            dropCount: 150,
+            dropColor: "rgba(0, 255, 255, 0.5)",
+            dropSpeedMin: 3,
+            dropSpeedMax: 8,
+            windEffect: 0.2,
+            glowEffect: true,
+            lightning: true,
+            lightningFrequency: 0.02
+        });
+    </script>
+</body>
+</html>
